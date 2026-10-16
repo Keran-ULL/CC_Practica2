@@ -1,0 +1,13 @@
+digraph MT {
+  rankdir=LR;
+  node [shape=circle, fontname="Helvetica"];
+  edge [fontname="Helvetica", fontsize=10];
+  inicio [shape=point];
+  inicio -> q0;
+  qf [shape=doublecircle];
+  q0 -> q1 [label="a,. / a,1 / R,R"];
+  q1 -> q1 [label="a,. / a,1 / R,R"];
+  q1 -> q2 [label="b,. / b,. / S,L"];
+  q2 -> q2 [label="b,1 / b,. / R,L\nb,. / b,. / R,S"];
+  q2 -> qf [label=".,. / .,. / S,S"];
+}

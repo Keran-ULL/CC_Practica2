@@ -1,0 +1,25 @@
+digraph MT {
+  rankdir=LR;
+  node [shape=circle, fontname="Helvetica"];
+  edge [fontname="Helvetica", fontsize=10];
+  inicio [shape=point];
+  inicio -> q0;
+  qf [shape=doublecircle];
+  q0 -> q0 [label="a,. / a,. / R,S"];
+  q0 -> q1 [label="b,. / b,1 / R,R"];
+  q0 -> q2 [label=".,. / .,0 / S,R"];
+  q1 -> q1 [label="a,. / a,. / R,S\nb,. / b,1 / R,R"];
+  q1 -> q3 [label=".,. / .,$ / L,R"];
+  q2 -> q3 [label=".,. / .,$ / L,R"];
+  q3 -> q3 [label="b,. / .,. / L,S"];
+  q3 -> q4 [label="a,. / .,1 / L,R"];
+  q3 -> qr [label=".,. / .,0 / S,L"];
+  q4 -> q4 [label="b,. / .,. / L,S\na,. / .,1 / L,R"];
+  q4 -> qr [label=".,. / .,. / S,L"];
+  qr -> qr [label=".,0 / .,0 / S,L\n.,1 / .,1 / S,L\n.,$ / .,$ / S,L"];
+  qr -> qc [label=".,. / .,. / R,R"];
+  qc -> qc [label=".,0 / 0,0 / R,R\n.,1 / 1,1 / R,R\n.,$ / .,$ / R,R"];
+  qc -> qb [label=".,. / .,. / L,L"];
+  qb -> qb [label="0,0 / 0,. / L,L\n1,1 / 1,. / L,L\n.,$ / .,. / L,L"];
+  qb -> qf [label=".,. / .,. / R,R"];
+}

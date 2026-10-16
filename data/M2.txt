@@ -1,0 +1,34 @@
+# MT2 (2 cintas): deja en la cinta 1 el numero de b y el de a en unario
+# Cinta 2 auxiliar; '$' es el separador provisional en la cinta 2.
+q0 q1 q2 q3 q4 qr qc qb qf
+a b
+a b 0 1 $ .
+q0
+.
+qf
+2
+q0 a . q0 a . R S
+q0 b . q1 b 1 R R
+q0 . . q2 . 0 S R
+q1 a . q1 a . R S
+q1 b . q1 b 1 R R
+q1 . . q3 . $ L R
+q2 . . q3 . $ L R
+q3 b . q3 . . L S
+q3 a . q4 . 1 L R
+q3 . . qr . 0 S L
+q4 b . q4 . . L S
+q4 a . q4 . 1 L R
+q4 . . qr . . S L
+qr . 0 qr . 0 S L
+qr . 1 qr . 1 S L
+qr . $ qr . $ S L
+qr . . qc . . R R
+qc . 0 qc 0 0 R R
+qc . 1 qc 1 1 R R
+qc . $ qc . $ R R
+qc . . qb . . L L
+qb 0 0 qb 0 . L L
+qb 1 1 qb 1 . L L
+qb . $ qb . . L L
+qb . . qf . . R R
